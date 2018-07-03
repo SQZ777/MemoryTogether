@@ -8,11 +8,6 @@ namespace MemoryTogetherTest
         internal int Money;
         public string Description { get; set; }
         public string RecordStatus { get; internal set; }
-
-        internal bool Record(double money, string descript)
-        {
-            throw new NotImplementedException();
-        }
     }
 
     public class AccountingBookOperator
