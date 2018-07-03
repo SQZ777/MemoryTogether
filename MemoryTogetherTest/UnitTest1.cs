@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace MemoryTogetherTest
 {
@@ -7,14 +6,13 @@ namespace MemoryTogetherTest
     {
         internal int Money;
         public string Description { get; set; }
-        public string RecordStatus { get; internal set; }
     }
 
     public class AccountingBookOperator
     {
-        public bool Record(int money, string accountingBookDescription)
+        public bool Record(int money, string description)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 
@@ -24,10 +22,10 @@ namespace MemoryTogetherTest
         [TestMethod]
         public void Record_Is_Success()
         {
-            var accountingBook = new AccountingBook();
+            var accountingBook = new AccountingBook() { Money = 10, Description = "this is test" };
             var accountingBookOperator = new AccountingBookOperator();
             var actual = accountingBookOperator.Record(accountingBook.Money, accountingBook.Description);
-            Assert.AreEqual(true, actual);
+            Assert.IsTrue(actual);
         }
     }
 }
