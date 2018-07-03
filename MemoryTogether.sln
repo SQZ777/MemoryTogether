@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryTogether", "MemoryTogether\MemoryTogether.csproj", "{99716EFE-32CA-4C72-B747-B16031F18F08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryTogetherTest", "MemoryTogetherTest\MemoryTogetherTest.csproj", "{8959F5E9-FC65-4577-A869-FBDC4C8889ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{99716EFE-32CA-4C72-B747-B16031F18F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99716EFE-32CA-4C72-B747-B16031F18F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99716EFE-32CA-4C72-B747-B16031F18F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8959F5E9-FC65-4577-A869-FBDC4C8889ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8959F5E9-FC65-4577-A869-FBDC4C8889ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8959F5E9-FC65-4577-A869-FBDC4C8889ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8959F5E9-FC65-4577-A869-FBDC4C8889ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
