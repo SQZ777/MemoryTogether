@@ -31,14 +31,24 @@ namespace MemoryTogether
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, MemoryTogetherContext dbContext)
+        public void Configure(IApplicationBuilder app, MemoryTogetherContext dbContext, IHostingEnvironment env)
         {
-            app.UseMvc();
-            dbContext.Database.EnsureCreated();
-            app.Run(async (context) =>
+            if (env.IsDevelopment())
             {
-                await context.Response.WriteAsync("Hello World!");
-            });
+                app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
+            }
+            else
+            {
+                app.Run(async (context) =>
+                {
+                    await context.Response.WriteAsync("Hello Error!");
+                });
+            }
+            app.UseMvcWithDefaultRoute();
+            app.UseStaticFiles();
+            dbContext.Database.EnsureCreated();
+            
         }
     }
 }
