@@ -26,7 +26,7 @@ namespace MemoryTogether
             services.AddMvc();
             services.AddDbContext<MemoryTogetherContext>(options =>
             {
-                options.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
+                options.UseSqlite(_config.GetConnectionString("SqliteConnection"));
             });
         }
 
